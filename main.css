@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    /*현재 실행중인 스크린 크기에 맞춰 상대적 크기를 반환*/
+    justify-content: center;
+    align-items: center;
+    background-color: #f4c2c26b;
+  }
+  
+  .calendar {
+    background-color: white;
+    border-radius: 25px;
+    padding: 0 1em;
+    padding-top: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽 끝으로 붙이기*/
+    align-items: center;
+    /*헤더의 버튼과 글을 정 가운데로 맞춘다. */
+    padding: 10px;
+    color: balck;
+  }
+  
+  header pre {
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .headerDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: black;
+    word-spacing: 0.5em;
+    /* 특정 요소 안에 있는 텍스트의 단어와 단어 사이 공백 간격이나,
+  인라인 요소와 인라인 요소 사이의 공백 간격을 조절하는 속성 */
+  }
+  
+  .days,
+  .week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0 20px;
+  }
+  .days div,
+  .week div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.5;
+  }
+  
+  .days div {
+    border-radius: 50%;
+    opacity: 1;
+  }
+  
+  .days div:hover {
+    background-color: #f4c2c28a;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .days div:active {
+    background-color: #f4c2c2; /* 선택된 날짜 배경색 */
+    color: white; /* 선택된 날짜 글자색 */
+    font-weight: bold; /* 선택된 날짜 글자 굵게 */
+    border: 2px solid #222; /* 선택된 날짜 테두리 */
+  }
+  
+  .selected {
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .current-date {
+    background-color: grey;
+    color: white;
+  }
+  
+  .has-todo {
+    background-color: #ffeb3b; /* 노란색 배경 */
+    color: black;
+    border: 2px solid #f4c2c2; /* 테두리 */
+    font-weight: bold; /* 글씨를 굵게 */
+  }
+  
+  .todolist {
+    width: 100%;
+    margin-top: 30px;
+    margin: 10px;
+  }
+  
+  .todolist ul {
+    list-style-type: none;
+  }
+  
+  .todolist h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .todolist li {
+    margin: 10px;
+    font-size: 20px;
+  }
+  
+  .todolist button {
+    margin-left: 10px;
+    border: 1px solid transparent;
+    background-color: #f4c2c2;
+    font-weight: bold;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  #todoInput {
+    width: 300px; /* 너비를 조정 */
+    height: 40px; /* 높이를 조정 */
+    font-size: 16px; /* 글씨 크기를 키워서 더 잘 보이게 함 */
+    padding: 5px; /* 입력 필드 안쪽 여백 추가 */
+    margin-bottom: 10px; /* input 아래에 여백 추가 */
+    border: 1px solid transparent;
+    border-radius: 10px;
+  }
+  #addTodo {
+    width: 100px;
+    height: 48px;
+    font-size: 16px;
+    cursor: pointer; /* 마우스를 올리면 커서가 포인터로 변환 */
+    border: 1px solid #f4c2c2;
+    border-radius: 10px;
+    background-color: #f4c2c2;
+    color: #222;
+    font-weight: bold;
+  }
+  

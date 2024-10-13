@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calendar">
+        <header>
+          <pre class="left">&#10094; </pre>
+          <div class="headerDisplay">
+            <p class="display"></p>
+            <!--현재의 연도와 월 출력 자리 -->
+          </div>
+          <pre class="right">&#10095;</pre>
+        </header>
+        <!--월요일부터 토요일까지 요일 출력 자리-->
+        <div class="week">
+          <div>일</div>
+          <div>월</div>
+          <div>화</div>
+          <div>수</div>
+          <div>목</div>
+          <div>금</div>
+          <div>토</div>
+        </div>
+        <div class="days">
+          <!--일 출력자리 -->
+        </div>
+        <div class="displaySelected">
+          <p class="selected"></p>
+        </div>
+      </div>
+      <div class="todolist">
+        <ul id="todoList"></ul>
+        <input type="text" id="todoInput" placeholder="할 일을 입력하세요" />
+        <button id="addTodo">추가</button>
+        <!-- 투두 리스트를 출력할 영역 -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
