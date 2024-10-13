@@ -1,125 +1,156 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+    /* 모든 요소의 기본 여백과 패딩을 0으로 초기화 */
+}
+
+body {
     display: flex;
     height: 100vh;
-    /*현재 실행중인 스크린 크기에 맞춰 상대적 크기를 반환*/
+    /* 화면의 높이를 전체 화면 높이로 설정 */
     justify-content: center;
+    /* 내용물을 가로로 가운데 정렬 */
     align-items: center;
+    /* 내용물을 세로로 가운데 정렬 */
     background-color: #f4c2c26b;
-  }
-  
-  .calendar {
+    /* 배경색을 연한 분홍색으로 설정 */
+}
+
+.calendar {
     background-color: white;
+    /* 달력 배경을 흰색으로 설정 */
     border-radius: 25px;
+    /* 모서리를 둥글게 만듦 */
     padding: 0 1em;
     padding-top: 20px;
-  }
-  
-  header {
+    /* 위쪽에 약간의 여백을 추가 */
+}
+
+header {
     display: flex;
     justify-content: space-between;
-    /* 양쪽 끝으로 붙이기*/
+    /* 헤더 내용을 양쪽 끝으로 배치 */
     align-items: center;
-    /*헤더의 버튼과 글을 정 가운데로 맞춘다. */
+    /* 내용물을 세로로 가운데 정렬 */
     padding: 10px;
-    color: balck;
-  }
-  
-  header pre {
+    color: black;
+    /* 텍스트 색상 설정 */
+}
+
+header pre {
     padding: 10px;
     font-size: 1.2em;
+    /* 폰트 크기를 조금 키움 */
     cursor: pointer;
-  }
-  
-  .headerDisplay {
+    /* 마우스를 올리면 클릭 가능한 포인터 모양으로 변경 */
+}
+
+.headerDisplay {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 텍스트를 중앙에 배치 */
     font-size: 1.2em;
     color: black;
     word-spacing: 0.5em;
-    /* 특정 요소 안에 있는 텍스트의 단어와 단어 사이 공백 간격이나,
-  인라인 요소와 인라인 요소 사이의 공백 간격을 조절하는 속성 */
-  }
-  
-  .days,
-  .week {
+    /* 단어 사이의 간격을 설정하여 가독성을 높임 */
+}
+
+.days, .week {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    /* 7열의 그리드 레이아웃을 만듦 (요일 및 날짜 배치) */
     padding: 0 20px;
-  }
-  .days div,
-  .week div {
+    /* 양쪽에 여백 추가 */
+}
+
+.days div, .week div {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 각 셀의 내용을 가운데 정렬 */
     width: 3rem;
     height: 3rem;
+    /* 셀의 크기를 설정 */
     opacity: 0.5;
-  }
-  
-  .days div {
+    /* 투명도를 살짝 적용 */
+}
+
+.days div {
     border-radius: 50%;
+    /* 날짜를 원형으로 만듦 */
     opacity: 1;
-  }
-  
-  .days div:hover {
+    /* 날짜는 완전하게 표시 */
+}
+
+.days div:hover {
     background-color: #f4c2c28a;
     color: black;
+    /* 마우스를 올리면 배경색을 연한 분홍색으로 변경 */
     cursor: pointer;
-  }
-  
-  .days div:active {
-    background-color: #f4c2c2; /* 선택된 날짜 배경색 */
-    color: white; /* 선택된 날짜 글자색 */
-    font-weight: bold; /* 선택된 날짜 글자 굵게 */
-    border: 2px solid #222; /* 선택된 날짜 테두리 */
-  }
-  
-  .selected {
+    /* 마우스를 올리면 클릭 가능한 포인터 모양으로 변경 */
+}
+
+.days div:active {
+    background-color: #f4c2c2; 
+    /* 선택된 날짜의 배경을 분홍색으로 설정 */
+    color: white; 
+    /* 선택된 날짜의 텍스트 색을 흰색으로 변경 */
+    font-weight: bold; 
+    /* 선택된 날짜의 텍스트를 굵게 표시 */
+    border: 2px solid #222; 
+    /* 선택된 날짜에 테두리 추가 */
+}
+
+.selected {
     margin-top: 10px;
     text-align: center;
     padding: 20px;
-  }
-  
-  .current-date {
+    /* 선택된 날짜 영역에 여백과 가운데 정렬 적용 */
+}
+
+.current-date {
     background-color: grey;
     color: white;
-  }
-  
-  .has-todo {
-    background-color: #ffeb3b; /* 노란색 배경 */
+    /* 현재 날짜는 회색 배경과 흰색 텍스트로 강조 */
+}
+
+.has-todo {
+    background-color: #ffeb3b;
+    /* 투두리스트가 있는 날짜는 노란색 배경으로 표시 */
     color: black;
-    border: 2px solid #f4c2c2; /* 테두리 */
-    font-weight: bold; /* 글씨를 굵게 */
-  }
-  
-  .todolist {
+    border: 2px solid #f4c2c2;
+    /* 노란색 배경에 분홍색 테두리 적용 */
+    font-weight: bold;
+    /* 텍스트를 굵게 표시 */
+}
+
+.todolist {
     width: 100%;
     margin-top: 30px;
     margin: 10px;
-  }
-  
-  .todolist ul {
+    /* 투두리스트 영역의 여백과 크기 조정 */
+}
+
+.todolist ul {
     list-style-type: none;
-  }
-  
-  .todolist h3 {
+    /* 목록의 기본 점 스타일을 제거 */
+}
+
+.todolist h3 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  
-  .todolist li {
+    /* 투두리스트 제목을 가운데 정렬하고 여백 추가 */
+}
+
+.todolist li {
     margin: 10px;
     font-size: 20px;
-  }
-  
-  .todolist button {
+    /* 투두리스트 항목에 여백과 폰트 크기 적용 */
+}
+
+.todolist button {
     margin-left: 10px;
     border: 1px solid transparent;
     background-color: #f4c2c2;
@@ -128,26 +159,29 @@
     height: 30px;
     border-radius: 2px;
     cursor: pointer;
-  }
-  
-  #todoInput {
-    width: 300px; /* 너비를 조정 */
-    height: 40px; /* 높이를 조정 */
-    font-size: 16px; /* 글씨 크기를 키워서 더 잘 보이게 함 */
-    padding: 5px; /* 입력 필드 안쪽 여백 추가 */
-    margin-bottom: 10px; /* input 아래에 여백 추가 */
+    /* 버튼 스타일과 크기 설정 */
+}
+
+#todoInput {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 10px;
     border: 1px solid transparent;
     border-radius: 10px;
-  }
-  #addTodo {
+    /* 투두 입력 필드의 크기와 여백을 설정하고 모서리를 둥글게 만듦 */
+}
+
+#addTodo {
     width: 100px;
     height: 48px;
     font-size: 16px;
-    cursor: pointer; /* 마우스를 올리면 커서가 포인터로 변환 */
+    cursor: pointer;
     border: 1px solid #f4c2c2;
     border-radius: 10px;
     background-color: #f4c2c2;
     color: #222;
     font-weight: bold;
-  }
-  
+    /* 투두 추가 버튼의 스타일을 지정하고 크기 및 색상 설정 */
+}
